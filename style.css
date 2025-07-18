@@ -1,0 +1,8 @@
+.dashboard_title {
+    position: fixed; /* Fix the title position relative to the viewport */
+    top: 0;          /* Align to the top edge */
+    left: 0;         /* Align to the left edge */
+    padding: 10px;   /* Add some padding for spacing */
+    background-color: transparent; /* Optional: set a background color */
+    /* z-index: 999;    Ensure the title appears on top of other elements */
+}
