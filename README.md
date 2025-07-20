@@ -25,7 +25,6 @@ This tool bridges technical transparency with user accessibility. Whether you're
 - 🧵 Modular architecture supporting precomputed SHAP values and stored model objects (`.pkl`)
 
 ---
-<pre> ``` ├── app.py # Streamlit app for SHAP-based fraud explanation ├── style.css # Optional custom styling for Streamlit ├── sample_transactions.csv # Subset of labeled sample transactions ├── transactions.csv # Full dataset of financial transactions ├── shap_input.csv # Precomputed SHAP values ├── shap_explanations.csv # Additional SHAP breakdowns (optional) ├── xgb_model.json # Saved XGBoost model structure ├── label_encoder.pkl # Encoder for categorical transaction types ├── README.md # Project overview and instructions ├── LICENSE # MIT License ├── .gitignore # Git ignored files │ ├── explore_data.ipynb # Notebook for data exploration ├── model_training.ipynb # Notebook for model development ├── model_explainer.ipynb # Notebook for SHAP explanation generation ├── selecting_transactions.ipynb # Logic for selecting and saving demo samples │ ├── archive/ # Folder for archived files ├── eda/ # Folder for EDA-related scripts/notebooks └── venv/ # Python virtual environment ``` </pre>
 
 ## 🚀 Getting Started
 
