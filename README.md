@@ -69,4 +69,4 @@ SHAP applies **game theory** to explain predictions, showing the **marginal cont
 ## 👤 Author
 
 Created with ❤️ by [Tanzil Hussain](https://www.linkedin.com/in/tanzilhussain)
-Passionate about **responsible AI**, **explainability**, and **data-driven UX**
+Passionate about **responsible AI**, **explainability**, and **data-driven UX**.
