@@ -77,11 +77,13 @@ The dataset contains anonymized financial transaction records, including:
 - `oldbalanceDest` / `newbalanceDest`: Receiver’s balance before and after
 - `isFraud`: Target variable (1 if fraudulent, 0 otherwise)
 
-> ⚠️ **Class Imbalance Note**: Like real-world data, the number of fraudulent transactions is very low compared to legitimate ones. Evaluation metrics like precision, recall, F1-score, or ROC-AUC are more appropriate than simple accuracy.
-
 > 📌 **Disclaimer**: The dataset is anonymized and intended for educational and research purposes only. It does not contain any real personal financial information.
+
+---
 
 ## 👤 Author
 
 Created with ❤️ by [Tanzil Hussain](https://www.linkedin.com/in/tanzilhussain)
 Passionate about **responsible AI**, **explainability**, and **data-driven UX**.
+
+---
