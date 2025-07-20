@@ -6,7 +6,7 @@ from catboost import CatBoostClassifier
 from sklearn.metrics import precision_score, recall_score, f1_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-from archive.explore_data import load_data
+from explore_data import load_data
 
 # Load and preprocess data
 df = load_data()
