@@ -30,7 +30,7 @@ This tool bridges technical transparency with user accessibility. Whether you're
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/transaction-risk-analyzer.git
+git clone https://github.com/tanzilhussain/transaction-risk-analyzer.git
 cd transaction-risk-analyzer
 ````
 
@@ -50,7 +50,7 @@ streamlit run app.py
 
 ---
 
-## 📌 SHAP Setup (Optional)
+## 📌 SHAP Setup
 
 If you're not using the precomputed `shap_input.csv`, you can dynamically generate SHAP values with:
 
