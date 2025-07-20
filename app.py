@@ -24,7 +24,7 @@ except:
     pass
 
 # TITLE
-st.title("Transaction Risk Analyzer")
+st.title("Transaction Fraud Risk Analyzer")
 
 st.markdown("""
 Welcome to the Transaction Risk Analyzer, a tool that helps you uncover how AI models detect suspicious financial activity.
