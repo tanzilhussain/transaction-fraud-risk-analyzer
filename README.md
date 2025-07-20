@@ -9,7 +9,7 @@
 This project taught me far more than just model training.
 
 🔎 **Interpretability vs. Accuracy**  
-While tuning my XGBoost classifier, I realized that making predictions is only half the battle—helping users **understand** those predictions is what builds trust. That’s where SHAP came in. Learning how to visualize feature contributions and explain model behavior pushed me to think like both a data scientist and a UX designer.
+While tuning my XGBoost classifier, I realized that making predictions is only half the battle, as helping users **understand** those predictions is what builds trust. That’s where SHAP came in. Learning how to visualize feature contributions and explain model behavior pushed me to think like both a data scientist and a UX designer.
 
 ⚖️ **Balancing Risk in an Imbalanced Dataset**  
 Fraud detection is inherently skewed. I learned to work with **imbalanced data**, carefully optimizing for **precision and recall** rather than accuracy. This meant adapting my threshold, using confusion matrices, and ensuring my classifier could detect rare but critical fraud cases.
