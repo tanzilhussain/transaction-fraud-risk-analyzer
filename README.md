@@ -65,7 +65,13 @@ Fraud detection isn't just a technical challenge — it's about **trust**. With 
 SHAP applies **game theory** to explain predictions, showing the **marginal contribution** of each feature. This makes the model’s reasoning **transparent and auditable**, even for tree-based ensembles like XGBoost.
 
 ---
+📊 Dataset
+This project uses the Credit Card Transactions Dataset by Kelvin Obiri on Kaggle, licensed under the MIT License. It contains anonymized financial transactions with features like transaction type, amount, and account balances.
 
+Each row represents a single transaction, labeled as either fraudulent (isFraud = 1) or legitimate (isFraud = 0). The dataset reflects real-world financial class imbalance, with fraudulent transactions being significantly rarer than non-fraudulent ones.
+
+Disclaimer: This dataset is anonymized and intended for research and educational use only. No personal or sensitive financial data is included.
+---
 ## 👤 Author
 
 Created with ❤️ by [Tanzil Hussain](https://www.linkedin.com/in/tanzilhussain)
