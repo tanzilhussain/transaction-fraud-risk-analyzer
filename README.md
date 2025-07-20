@@ -17,11 +17,11 @@ This tool bridges technical transparency with user accessibility. Whether you're
 
 ## 🧠 Technical Features
 
-- ⚙️ **XGBoost Binary Classifier** trained on structured transactional data
-- 💡 **SHAP Value Generation** using `shap.Explainer` and `shap.Explanation` objects
-- 📈 **Model-Wide Explanation** with SHAP summary bar plots
-- 🧠 **Per-Transaction Explanations** with ranked SHAP values and natural language insights
-- 🧪 **Streamlit Frontend** for real-time user interaction
+- ⚙️ XGBoost Binary Classifier trained on structured transactional data
+- 💡 SHAP Value Generation using `shap.Explainer` and `shap.Explanation` objects
+- 📈 Model-Wide Explanation with SHAP summary bar plots
+- 🧠 Per-Transaction Explanations with ranked SHAP values and natural language insights
+- 🧪 Streamlit Frontend for real-time user interaction
 - 🧵 Modular architecture supporting precomputed SHAP values and stored model objects (`.pkl`)
 
 ---
