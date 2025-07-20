@@ -3,6 +3,14 @@
 **Transaction Fraud Risk Analyzer** is an interactive Streamlit dashboard built to **explain how an XGBoost model detects potentially fraudulent transactions**. By combining **SHAP (SHapley Additive exPlanations)** with an intuitive UI, this project transforms a “black box” fraud detection model into a transparent, educational tool.
 
 ---
+## 🔍 Live Demo
+
+Explore the interactive dashboard here:  
+[🚨 Transaction Fraud Risk Analyzer](https://transaction-fraud-risk-analyzer.streamlit.app/)
+
+This app uses explainable AI (SHAP) to detect potential fraud in financial transactions and educate users about risky patterns.
+
+---
 
 ## 📘 What I Learned
 
