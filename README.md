@@ -15,7 +15,7 @@ While tuning my XGBoost classifier, I realized that making predictions is only h
 Fraud detection is inherently skewed. I learned to work with **imbalanced data**, carefully optimizing for **precision and recall** rather than accuracy. This meant adapting my threshold, using confusion matrices, and ensuring my classifier could detect rare but critical fraud cases.
 
 📊 **From Code to Communication**  
-SHAP’s math is beautiful—but for everyday users, it can be overwhelming. Building this as a **dashboard instead of a notebook** forced me to think through *how to translate model logic into plain language*. I added dynamic reasons, simple toggles, and friendly charts that expose the "why" without exposing the model to manipulation.
+SHAP’s math is beautiful, but for everyday users, it can be overwhelming. Building this as a **dashboard instead of a notebook** forced me to think through *how to translate model logic into plain language*. I added dynamic reasons, simple toggles, and friendly charts that expose the "why" without exposing the model to manipulation.
 
 ---
 
@@ -25,7 +25,7 @@ Fraud detection models are often treated as black boxes. While building this, I 
 - **What makes a transaction look “suspicious” to a model?**
 - **How can we demystify AI predictions without revealing exploitable details?**
 
-This project started as a technical experiment with XGBoost and imbalanced datasets. But as I built SHAP explanations, I realized how important *interpretability* is — not just for developers, but for anyone impacted by AI-driven financial decisions.
+This project started as a technical experiment with XGBoost and imbalanced datasets. But as I built SHAP explanations, I realized how important *interpretability* is, not just for developers, but for anyone impacted by AI-driven financial decisions.
 
 ---
 
