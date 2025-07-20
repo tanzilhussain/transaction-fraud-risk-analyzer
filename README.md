@@ -1,4 +1,4 @@
-```markdown
+
 # 💳 Transaction Risk Analyzer
 
 Transaction Risk Analyzer is a fully interactive Streamlit dashboard that explains how an XGBoost classification model detects potentially fraudulent financial transactions. By leveraging SHAP (SHapley Additive exPlanations), the app translates complex model behavior into intuitive visualizations, making it easier to understand AI-driven fraud detection systems.
@@ -93,4 +93,4 @@ Connect with me to chat about AI, responsible ML, and data-driven UX.
 
 MIT License — use with purpose and responsibility.
 
-```
+
