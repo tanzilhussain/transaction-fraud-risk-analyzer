@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import xgboost as xgb
 
 # load data
-df_samples = pd.read_csv("sample_transactions.csv")
-shap_df = pd.read_csv("shap_explanations.csv")
+df_samples = pd.read_csv("data/sample_transactions.csv")
+shap_df = pd.read_csv("data/shap_explanations.csv")
 
 # features used in model
 features = ['step', 'amount', 'oldbalanceOrg', 'newbalanceOrig',
@@ -53,7 +53,6 @@ if st.toggle("🔎 Explain this prediction"):
     input_features = example[features].values
     expl = shap.Explanation(values=shap_vals,
                             base_values=0,
-                            data=input_features,
                             feature_names=features)
 
     st.write("### SHAP Explanation")
@@ -101,7 +100,6 @@ if selected_label != "-- Select a Transaction --":
     input_txn_features = txn[features].values
     expl_txn = shap.Explanation(values=shap_vals_txn,
                                 base_values=0,
-                                data=input_txn_features,
                                 feature_names=features)
 
     st.write("### SHAP Explanation")
@@ -116,10 +114,10 @@ st.markdown("This plot shows which features most influence the model **on averag
 # recreate SHAP values
 X_all = df_samples[features]
 model = xgb.XGBClassifier()
-model.load_model("xgb_model.json")
+model.load_model("data/xgb_model.json")
 explainer = shap.Explainer(model)
 shap_values_all = explainer(X_all)
-pd.DataFrame(shap_values_all.values, columns=features).to_csv("shap_input.csv")
+pd.DataFrame(shap_values_all.values, columns=features).to_csv("data/shap_input.csv")
 
 # generate the SHAP summary plot
 fig_summary, ax = plt.subplots()

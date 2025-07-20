@@ -1,74 +1,59 @@
+```markdown
+# 💳 Transaction Fraud Risk Analyzer
 
-# 💳 Transaction Risk Analyzer
-
-Transaction Risk Analyzer is a fully interactive Streamlit dashboard that explains how an XGBoost classification model detects potentially fraudulent financial transactions. By leveraging SHAP (SHapley Additive exPlanations), the app translates complex model behavior into intuitive visualizations, making it easier to understand AI-driven fraud detection systems.
+**Transaction Fraud Risk Analyzer** is an interactive Streamlit dashboard built to **explain how an XGBoost model detects potentially fraudulent transactions**. By combining **SHAP (SHapley Additive exPlanations)** with an intuitive UI, this project transforms a “black box” fraud detection model into a transparent, educational tool.
 
 ---
 
-## 🎯 Purpose
+## 📘 What I Learned
 
-This tool bridges technical transparency with user accessibility. Whether you're an ML practitioner, analyst, or someone curious about responsible AI, this project helps you:
+This project taught me far more than just model training.
 
-- Understand the reasoning behind fraud predictions at both local (per-transaction) and global (model-wide) levels
-- Interpret how specific features (amounts, balances, transaction types) influence model output
-- Visualize SHAP explanations to demystify the "black box" nature of tree-based models
+🔎 **Interpretability vs. Accuracy**  
+While tuning my XGBoost classifier, I realized that making predictions is only half the battle—helping users **understand** those predictions is what builds trust. That’s where SHAP came in. Learning how to visualize feature contributions and explain model behavior pushed me to think like both a data scientist and a UX designer.
+
+⚖️ **Balancing Risk in an Imbalanced Dataset**  
+Fraud detection is inherently skewed. I learned to work with **imbalanced data**, carefully optimizing for **precision and recall** rather than accuracy. This meant adapting my threshold, using confusion matrices, and ensuring my classifier could detect rare but critical fraud cases.
+
+📊 **From Code to Communication**  
+SHAP’s math is beautiful—but for everyday users, it can be overwhelming. Building this as a **dashboard instead of a notebook** forced me to think through *how to translate model logic into plain language*. I added dynamic reasons, simple toggles, and friendly charts that expose the "why" without exposing the model to manipulation.
+
+---
+
+## 🎯 Purpose & Reflection
+
+Fraud detection models are often treated as black boxes. While building this, I wanted to answer:
+- **What makes a transaction look “suspicious” to a model?**
+- **How can we demystify AI predictions without revealing exploitable details?**
+
+This project started as a technical experiment with XGBoost and imbalanced datasets. But as I built SHAP explanations, I realized how important *interpretability* is — not just for developers, but for anyone impacted by AI-driven financial decisions.
 
 ---
 
 ## 🧠 Technical Features
 
-- ⚙️ XGBoost Binary Classifier trained on structured transactional data
-- 💡 SHAP Value Generation using `shap.Explainer` and `shap.Explanation` objects
-- 📈 Model-Wide Explanation with SHAP summary bar plots
-- 🧠 Per-Transaction Explanations with ranked SHAP values and natural language insights
-- 🧪 Streamlit Frontend for real-time user interaction
-- 🧵 Modular architecture supporting precomputed SHAP values and stored model objects (`.pkl`)
+- ⚙️ **XGBoost Binary Classifier** trained on real-world-like transactional data  
+- 💡 **SHAP Value Generation** (`shap.Explainer` & `shap.Explanation`) to quantify feature contributions  
+- 📈 **Model-Wide Explanations** via SHAP summary plots (global feature importance)  
+- 🔍 **Per-Transaction Explanations** with ranked SHAP values and human-readable reasoning  
+- 🎛 **Streamlit Dashboard** for interactive exploration of flagged vs. safe transactions  
+- 🧵 **Modular Backend** with precomputed SHAP values and serialized model objects (`.pkl`)  
 
 ---
 
-## 🚀 Getting Started
+## 🌍 Broader Impact
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/tanzilhussain/transaction-risk-analyzer.git
-cd transaction-risk-analyzer
-````
-
-### 2. Set Up Environment
-
-```bash
-python -m venv venv
-source venv/bin/activate  # or `venv\Scripts\activate` on Windows
-pip install -r requirements.txt
-```
-
-### 3. Launch the App
-
-```bash
-streamlit run app.py
-```
-
----
-
-## 📌 SHAP Setup
-
-If you're not using the precomputed `shap_input.csv`, you can dynamically generate SHAP values with:
-
-```python
-from shap import Explainer
-import joblib
-
-model = joblib.load("xgb_fraud_model.pkl")
-explainer = Explainer(model)
-shap_values = explainer(X_all)
-```
+Fraud detection isn't just a technical challenge — it's about **trust**. With tools like this, I hope to:
+- Show users **why** a transaction might be flagged, encouraging **awareness of risky behaviors**  
+- Promote **responsible AI**, where explainability is prioritized alongside accuracy  
+- Provide a template for **educational dashboards** that teach, rather than just predict  
 
 ---
 
 ## ⚖️ Model Info
 
 * **Model**: XGBoost Classifier (`xgb.XGBClassifier`)
-* **Metrics**: Tuned for precision-recall tradeoffs on imbalanced datasets
+* **Focus**: Precision-recall optimization on an imbalanced dataset
 * **Features Used**:
 
   * `amount`, `step`, `oldbalanceOrg`, `newbalanceOrig`
@@ -78,19 +63,14 @@ shap_values = explainer(X_all)
 
 ## 🧠 Why SHAP?
 
-SHAP provides model-agnostic explanations grounded in cooperative game theory. It breaks down the contribution of each feature to the prediction, making the decision process interpretable and auditable.
+SHAP applies **game theory** to explain predictions, showing the **marginal contribution** of each feature. This makes the model’s reasoning **transparent and auditable**, even for tree-based ensembles like XGBoost.
 
 ---
 
 ## 👤 Author
 
-Made with ❤️ by [Tanzil Hussain](https://www.linkedin.com/in/tanzilhussain)
-Connect with me to chat about AI, responsible ML, and data-driven UX.
-
----
-
-## 📄 License
-
-MIT License — use with purpose and responsibility.
+Created with ❤️ by [Tanzil Hussain](https://www.linkedin.com/in/tanzilhussain)
+Passionate about **responsible AI**, **explainability**, and **data-driven UX**
 
 
+```

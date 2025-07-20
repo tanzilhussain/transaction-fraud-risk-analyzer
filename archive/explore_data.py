@@ -7,7 +7,7 @@ import plotly.figure_factory as ff
 
 def load_data():
   # Set the path to the file you'd like to load
-  file_path = "transactions.csv"
+  file_path = "data/transactions.csv"
 
   # Load the latest version
   df = pd.read_csv(file_path)

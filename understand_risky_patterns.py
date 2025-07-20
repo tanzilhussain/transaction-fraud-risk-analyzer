@@ -2,7 +2,7 @@ import pandas as pd
 from archive.explore_data import load_data
 import shap
 import joblib
-df = pd.read_csv("transactions.csv")
+df = pd.read_csv("data/transactions.csv")
 
 # filter csv 
 conditions = (
@@ -22,7 +22,7 @@ model = joblib.load("xgb_fraud_model.pkl")
 le = joblib.load("label_encoder.pkl")
 df_samples['encoded_type'] = le.fit_transform(df_samples['type'])
 
-df_samples.to_csv("sample_transactions.csv", index=False)
+df_samples.to_csv("data/sample_transactions.csv", index=False)
 # features included in model
 features = ['step', 'amount', 'oldbalanceOrg', 'newbalanceOrig','oldbalanceDest', 'newbalanceDest', 'encoded_type']
 X_samples = df_samples[features]
