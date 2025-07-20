@@ -30,13 +30,7 @@ This tool bridges technical transparency with user accessibility. Whether you're
 
 ```
 
-├── app.py # Main Streamlit dashboard
-├── sample_transactions.csv # Labeled sample transactions with features
-├── shap_input.csv # Precomputed SHAP values (optional)
-├── xgb_fraud_model.pkl # Trained XGBoost model
-├── style.css # Optional styling for Streamlit
-├── requirements.txt # Python dependencies
-└── README.md # You're here!
+<pre> ``` ├── app.py # Main Streamlit dashboard ├── sample_transactions.csv # Labeled sample transactions with features ├── shap_input.csv # Precomputed SHAP values (optional) ├── xgb_fraud_model.pkl # Trained XGBoost model ├── style.css # Optional styling for Streamlit ├── requirements.txt # Python dependencies └── README.md # You're here! ``` </pre>
 
 ````
 
