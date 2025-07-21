@@ -24,7 +24,7 @@ except:
     pass
 
 # TITLE
-st.title("Transaction Risk Analyzer")
+st.title("Transaction Fraud Risk Analyzer")
 
 st.markdown("""
 Welcome to the Transaction Risk Analyzer, a tool that helps you uncover how AI models detect suspicious financial activity.
@@ -83,11 +83,12 @@ st.markdown("<br>", unsafe_allow_html=True)
 st.header("📚 Learn from Other Examples")
 
 # create options with placeholder
-transaction_options = ["-- Select a Transaction --"] + [f"Transaction {i + 1}" for i in df.index]
+indices = [1, 2, 3, 4]
+transaction_options = ["-- Select a Transaction --"] + [f"Transaction {i}" for i in indices]
 selected_label = st.selectbox("Pick a Sample Transaction", transaction_options)
 
 if selected_label != "-- Select a Transaction --":
-    txn_index = int(selected_label.split(" ")[-1]) - 1
+    txn_index = int(selected_label.split(" ")[-1])
     txn = df.loc[txn_index]
 
     st.markdown(f"### Prediction: {'🚨 Fraud' if txn['prediction'] == 1 else '✅ Not Fraud'}")
@@ -106,6 +107,23 @@ if selected_label != "-- Select a Transaction --":
     fig2, ax2 = plt.subplots()
     shap.plots.bar(expl_txn, show=False)
     st.pyplot(fig2)
+    if st.toggle("Explain this prediction"):
+        # Auto-generated explanation
+        top_features = expl_txn.abs.values.argsort()[-3:][::-1]
+        top_feature_names = [features[i] + "_shap" for i in top_features]
+        reason_texts = {
+            'amount_shap': "an unusually large transaction amount",
+            'oldbalanceOrg_shap': "a low sender balance",
+            'newbalanceOrig_shap': "a suspicious change in sender balance",
+            'oldbalanceDest_shap': "a suspicious change in receiver balance",
+            'newbalanceDest_shap': "a sharp increase in receiver balance",
+            'step_shap': "an unusual transaction time",
+            'encoded_type_shap': f"a high-risk transaction type: {txn['transaction_type']}"
+        }
+
+        st.write("💡 The model flagged this transaction likely due to:")
+        for feat in top_feature_names:
+            st.markdown(f"- {reason_texts.get(feat, feat)}")
 
 st.markdown("<br>", unsafe_allow_html=True)
 st.header("🌐 How the Model Thinks (Overall)")
