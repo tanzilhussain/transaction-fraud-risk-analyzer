@@ -85,7 +85,7 @@ The dataset contains anonymized financial transaction records, including:
 - `oldbalanceDest` / `newbalanceDest`: Receiver’s balance before and after
 - `isFraud`: Target variable (1 if fraudulent, 0 otherwise)
 
-> 📌 **Disclaimer**: The dataset is anonymized and intended for educational and research purposes only. It does not contain any real personal financial information.
+> 📌 **Disclaimer**: This project is for educational use only. It uses synthetic data and demonstrates fraud detection model development, evaluation, and explainability techniques. The model threshold, logic, and feature importance visualizations are illustrative and **not intended for production use**. Do not use this as a real-world fraud prevention tool. All thresholds and model outputs have been generalized to avoid exposing any exploitable patterns.
 
 ---
 
